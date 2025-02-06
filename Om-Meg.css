@@ -1,0 +1,213 @@
+#Om-meg-page {
+  /* display: flex;
+    justify-content: center;
+    align-items: flex-start; */
+  /* margin-bottom: 80px; */
+  /* padding-bottom: 100px; */
+  position: relative;
+  /* z-index: 1;
+  min-height: auto; */
+  height: auto;
+
+  /* Sørger for at den ikke fyller hele skjermen */
+}
+
+#Om-meg-page h1 {
+  background: linear-gradient(45deg, rgb(169, 43, 200), rgb(159, 21, 95));
+  -webkit-text-fill-color: transparent;
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: bold;
+  position: relative;
+  top: 0;
+  /* Juster avstand fra toppen */
+  left: 50%;
+  /* padding: 20px 0; */
+  transform: translateX(
+    -50%
+  ); /* Flytter elementet tilbake halvparten av bredden for perfekt sentrering */
+}
+.first-paragraph {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  padding: 50px;
+  max-width: 900px;
+  margin: 0 auto;
+  font-style: italic;
+}
+.about {
+  display: flex;
+  /* flex-direction: coloumn; */
+  align-items: center;
+  gap: 10px;
+  font-size: 25px;
+  flex-wrap: wrap;
+  /* text-align: left;
+  display: inline-block; */
+}
+.about-self {
+  flex: 2;
+  text-align: justify;
+  animation: slideLeft 3s ease-out forwards;
+  animation-delay: 3s;
+  font-size: 18px;
+}
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.text-color {
+  color: rgba(19, 173, 199, 1);
+  font-style: italic;
+  font-size: 25px;
+}
+.about p,
+.about h3 {
+  display: inline-block;
+  transform: rotate(-45deg);
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.5s ease-in-out;
+}
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.about p:hover {
+  transform: rotate(-10deg); /* Roterer mer når musen er over */
+}
+
+.about h3:hover {
+  transform: rotate(10deg);
+}
+@keyframes rotateText {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.about p,
+.about h3 {
+  display: inline-block;
+  animation: rotateText 2s infinite ease-in-out;
+}
+.second-paragraph {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  font-style: italic;
+  gap: 70px;
+  /* margin-right: 10px; */
+}
+.hero-img {
+  flex: 1;
+}
+
+.education {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  display: block;
+  margin-right: 70px;
+  animation: slideRight 3s ease-out forwards;
+  animation-delay: 3s;
+}
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(80px);
+  }
+}
+
+@media (max-width: 768px) {
+  .second-paragraph {
+    flex-direction: column; /* Endrer til vertikal visning på små skjermer */
+    text-align: center;
+  }
+
+  .hero-img {
+    margin-top: 20px; /* Juster plasseringen av bildet på små skjermer */
+  }
+}
+.Third-paragraph {
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 80px;
+  max-width: 900px;
+  margin: 0 auto;
+  font-style: italic;
+}
+.Third-paragraph img {
+  flex: 1;
+  max-width: 300px;
+  height: auto;
+}
+.Third-paragraph-text {
+  flex: 1.5;
+  text-align: justify;
+}
+.Third-paragraph img {
+  max-width: 80%;
+}
+.text {
+  flex: 2;
+  text-align: justify;
+  animation: slideLeft 3s ease-out forwards;
+  animation-delay: 3s;
+  font-size: 18px;
+}
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.resume-icon {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+.resume-container img {
+  width: 400px;
+  height: auto;
+}
+.resume-container:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+}

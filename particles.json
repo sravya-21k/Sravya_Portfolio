@@ -1,0 +1,38 @@
+{
+  "particles": {
+    "number": {
+      "value": 300,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#13adc7",
+      "gradient": {
+        "type": "linear",
+        "x0": 0,
+        "y0": 0,
+        "x1": 1,
+        "y1": 1,
+        "stops": [
+          { "color": "rgba(19, 173, 199, 1)", "offset": 0 },
+          { "color": "rgba(148, 93, 214, 1)", "offset": 0.5 },
+          { "color": "rgba(105, 120, 209, 1)", "offset": 1 }
+        ]
+      }
+    },
+    "shape": {
+      "type": "circle"
+    },
+    "opacity": {
+      "value": 0.5
+    },
+    "size": {
+      "value": 3
+    },
+    "line_linked": {
+      "enable": false
+    }
+  }
+}

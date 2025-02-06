@@ -1,0 +1,75 @@
+.kontakt {
+  text-align: center;
+  margin-top: 50px;
+  padding: 40px 20px;
+  background: rgba(20, 37, 71, 1);
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+.kontakt:hover {
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.up-arrow {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.up-arrow img {
+  width: 35px;
+  cursor: pointer;
+  transition: transform 0-3s ease-in-out;
+}
+.up-arrow img:hover {
+  transform: translateY(-5px);
+}
+.kontakt-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+.kontakt-details p {
+  font-size: 20px;
+  color: #ddd;
+  /* font-family: "Roboto", sans-serif; */
+}
+.kontakt-details a {
+  color: #13adc7;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+.kontakt-details a:hover {
+  color: #ff3f7c;
+}
+.kontakt-icons {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  margin-top: 30px;
+}
+.kontakt-icons img {
+  width: 45px;
+  margin: 0 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+.kontakt-icons img:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
+}

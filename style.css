@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  background: rgba(20, 37, 71, 1);
+  color: #f0f4ff;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: rgba(20, 37, 71, 1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  margin-top: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.name {
+  font-size: 60px;
+  background: linear-gradient(45deg, rgb(169, 43, 200), rgb(159, 21, 95));
+  -webkit-text-fill-color: transparent;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+
+  text-decoration: none;
+  font-weight: 800;
+  font-style: italic;
+  pointer-events: none;
+  animation: slideTop 1s ease forwards;
+}
+
+.nav-bar a {
+  display: inline-block;
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  margin-left: 35px;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: 0.5s;
+  opacity: 0;
+  animation: slideTop 0.5s ease forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+.nav-bar a:hover {
+  font-size: 25px;
+  background: linear-gradient(45deg, rgb(169, 43, 200), rgb(159, 21, 95));
+  background-clip: unset;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  text-decoration: none;
+}
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+.hero {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    rgba(34, 54, 102, 1),
+    rgba(20, 37, 71, 1)
+  );
+  z-index: 1;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 100px 10%;
+  animation: shimmerBackground 2s infinite ease-in-out;
+  @keyframes shimmerBackground {
+    0% {
+      background: linear-gradient(
+        135deg,
+        rgba(34, 54, 102, 1),
+        rgba(20, 37, 71, 1)
+      );
+    }
+    50% {
+      background: linear-gradient(
+        135deg,
+        rgba(20, 37, 71, 0.7),
+        rgba(34, 54, 102, 0.7)
+      );
+    }
+    100% {
+      background: linear-gradient(
+        135deg,
+        rgba(34, 54, 102, 1),
+        rgba(20, 37, 71, 1)
+      );
+    }
+  }
+}
+.hero-content {
+  position: relative;
+  line-height: 1;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  text-shadow: 0 4px 6px rgba(201, 110, 213, 0.6);
+}
+.hero-content h1 {
+  font-size: 100px;
+  font-weight: 1000;
+  font-style: oblique;
+  font-family: "Port Lligat Slab", serif;
+  background: linear-gradient(
+    135deg,
+    rgb(159, 21, 95) 30%,
+    rgba(148, 93, 214, 1) 65%,
+    rgb(159, 21, 95) 90%
+  );
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+  animation-delay: 0.3s;
+  transition: all 0.3s ease-in-out;
+}
+.hero-content h1:hover {
+  transform: scale(1.05);
+  /* text-shadow: 0px 8px 20px rgba(148, 93, 214, 0.8); */
+}
+.hero-content h3 {
+  font-size: 50px;
+  font-weight: 500;
+  font-style: semibold;
+  margin-top: 15px;
+
+  color: #ddd;
+  padding-left: 80px;
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1s;
+}
+.hero-content p {
+  font-size: 18px;
+  margin: 20px 0 40px;
+  font-weight: 400px;
+  color: rgba(255, 255, 255, 0.8);
+  opacity: 0;
+  animation: slideLeft 1s ease forwards;
+  animation-delay: 1.3s;
+}
+.hero-content h1:hover {
+  color: #fff;
+  background: linear-gradient(
+    90deg,
+    rgba(19, 173, 199, 1),
+    rgba(148, 93, 214, 1),
+    rgba(105, 120, 209, 1)
+  );
+  background-clip: content-box;
+  -webkit-background-clip: text;
+}
+.bx {
+  color: blueviolet;
+  padding-top: 50px;
+  width: 50px;
+}
+.hero-img {
+  width: 410px;
+  height: 410px;
+  margin-right: 50px;
+  padding-right: 20px;
+  opacity: 0;
+  animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+  animation-delay: 2.1s, 3.1s;
+}
+.hero-img .circle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* background: yellowgreen; */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin-right: -50px; */
+}
+
+.hero-img .circle::after {
+  content: " ";
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  background: #0c1022;
+  border-radius: 50%;
+}
+.circle span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(19, 173, 199, 1),
+    rgba(148, 93, 214, 1),
+    rgba(148, 93, 214, 1)
+  );
+  border-radius: 50%;
+}
+.circle span:nth-child(1) {
+  filter: blur(10px);
+}
+.circle .image {
+  position: relative;
+  width: 390px;
+  height: 390px;
+  /* background: red; */
+  border-radius: 50%;
+  z-index: 1;
+  overflow: hidden;
+}
+.image img {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 350px;
+  object-fit: cover;
+}
+.Ellipse {
+  position: absolute;
+  bottom: 50px;
+  left: 160px;
+  animation: zoomIn 1s ease forwards, zoomOut 4s ease-in-out infinite;
+  animation-delay: 2.1s, 3.1s;
+}
+.arrow {
+  position: absolute;
+  top: 80%;
+  bottom: 10px;
+  text-align: center;
+  cursor: pointer;
+  width: 40px;
+  height: 20px;
+}
+@keyframes slideTop {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes circleRotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(36deg);
+  }
+}
+@keyframes zoomOut {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .hero-content h3 {
+    font-size: 24px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .hero-content .cta-button {
+    padding: 12px 25px;
+  }
+}
