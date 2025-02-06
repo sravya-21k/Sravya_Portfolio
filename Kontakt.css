@@ -1,4 +1,4 @@
-.kontakt {
+#kontakt {
   text-align: center;
   margin-top: 50px;
   padding: 40px 20px;
@@ -72,4 +72,69 @@ h2 {
 .kontakt-icons img:hover {
   transform: scale(1.2);
   filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4));
+}
+/*  Tablets ( 768px - 1024px) */
+@media (max-width: 1024px) {
+  #kontakt {
+    padding: 30px 15px;
+  }
+
+  h2 {
+    font-size: 3rem; /* Adjust heading size */
+  }
+
+  .kontakt-details p {
+    font-size: 18px;
+  }
+
+  .kontakt-icons img {
+    width: 40px; /* Slightly smaller icons */
+    margin: 0 10px;
+  }
+}
+
+/*  Mobile Devices  */
+@media (max-width: 767px) {
+  #kontakt {
+    padding: 25px 10px;
+    border-radius: 10px;
+  }
+
+  h2 {
+    font-size: 2.5rem; /* Reduce heading */
+  }
+
+  .kontakt-details p {
+    font-size: 16px;
+  }
+
+  .kontakt-icons img {
+    width: 35px;
+    margin: 0 8px;
+  }
+}
+
+/* Small Mobile (Below 480px) */
+@media (max-width: 480px) {
+  #kontakt {
+    padding: 20px 5px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .kontakt-details p {
+    font-size: 14px;
+  }
+
+  .kontakt-icons {
+    flex-wrap: wrap; /* Allows icons to wrap if needed */
+    gap: 10px;
+  }
+
+  .kontakt-icons img {
+    width: 30px;
+    margin: 0 5px;
+  }
 }

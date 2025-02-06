@@ -1,42 +1,26 @@
-.Technology-page {
-  /* padding-top: 80px; */
-  /* margin-top: 80px; */
+#Technology-page {
   z-index: 1;
   position: relative;
+  padding: 50px 20px;
 }
 
-.Technology-page h1 {
+#Technology-page h1 {
   background: linear-gradient(45deg, rgb(169, 43, 200), rgb(159, 21, 95));
   -webkit-text-fill-color: transparent;
-  background-clip: content-box;
+  background-clip: text;
   -webkit-background-clip: text;
   font-size: 4rem;
   font-weight: bold;
-  position: relative;
+  margin-bottom: 30px;
   text-align: center;
-  /* padding-bottom: 20px; */
-  /* top: -50px; */
-  /* Juster avstand fra toppen */
-  /* left: 50%;
-  padding: 60px 0;
-  transform: translateX(-50%); */
 }
 
 .Technology {
-  width: 100%;
-  /* height: 50vh; */
   display: flex;
-  flex-direction: row;
-  /* flex-wrap: wrap; */
-  justify-content: space-between;
-  gap: 5px;
-  /* padding: 50px 20px; */
-  /* background-color: #f8f9fa; */
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
   padding-top: 30px;
-  /* overflow-x: auto; */
-  /* scrollbar-width: none; */
-  /* white-space: nowrap; */
-  /* border: 2px solid red; */
 }
 .icon-frame {
   position: relative;
@@ -47,16 +31,9 @@
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  /* 
-  
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); */
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
   flex-shrink: 0;
-  /* border: 2px solid transparent; */
-  /* border-image-source: linear-gradient(90deg, #13adc7, #945dd6); */
-  /* border-image-slice: 1; */
-  /* background-color: white; */
   overflow: hidden;
 }
 
@@ -74,26 +51,14 @@
   font-weight: bold;
   margin: 0;
 }
-
-/* 📱 For små skjermer (mobil) */
-@media (max-width: 600px) {
-  .Technology-page {
-    height: auto;
-    padding-bottom: 50px 0;
-  }
-
-  .Technology-page h1 {
-    font-size: 2.5rem;
-    /* top: 10px; */
-    /* padding: 20px 0; */
+/* 🌟 Tablets (iPad & similar: 768px - 1024px) */
+@media (max-width: 1024px) {
+  #Technology-page h1 {
+    font-size: 3rem; /* Reduce title size */
   }
 
   .Technology {
-    flex-wrap: wrap; /* Endrer til wrap for å unngå horisontal scrolling */
-    justify-content: center;
-    gap: 20px;
-    padding-top: 100px;
-    height: auto;
+    gap: 15px; /* Reduce spacing */
   }
 
   .icon-frame {
@@ -102,59 +67,59 @@
   }
 
   .icon-frame img {
-    width: 40px;
+    width: 35px;
   }
 
   .icon-frame h3 {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 
-/* 📏 For nettbrett (mellomstore skjermer) */
-@media (max-width: 900px) {
+/*  Mobile Devices  */
+@media (max-width: 767px) {
+  #Technology-page h1 {
+    font-size: 2.5rem; /* Smaller heading */
+  }
+
   .Technology {
     flex-wrap: wrap;
-    gap: 30px;
-    padding-top: 150px;
-  }
-
-  .Technology-page h1 {
-    font-size: 3rem;
-    top: 0px;
+    gap: 10px;
   }
 
   .icon-frame {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
 
   .icon-frame img {
-    width: 45px;
+    width: 30px;
   }
 
   .icon-frame h3 {
-    font-size: 15px;
+    font-size: 12px;
   }
 }
 
-/* 💻 For store skjermer (f.eks. widescreen) */
-@media (min-width: 1200px) {
+/*  Small Mobile (Below 480px) */
+@media (max-width: 480px) {
+  #Technology-page h1 {
+    font-size: 2rem;
+  }
+
   .Technology {
-    max-width: 1100px;
-    margin: 0 auto;
-    gap: 50px;
+    gap: 8px;
   }
 
   .icon-frame {
-    width: 130px;
-    height: 130px;
+    width: 70px;
+    height: 70px;
   }
 
   .icon-frame img {
-    width: 55px;
+    width: 25px;
   }
 
   .icon-frame h3 {
-    font-size: 18px;
+    font-size: 11px;
   }
 }
