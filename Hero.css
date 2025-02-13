@@ -9,6 +9,10 @@ body {
   background: rgba(20, 37, 71, 1);
   color: #f0f4ff;
 }
+main,
+section:first-of-type {
+  padding-top: 80px; /* Adjust according to your header's height */
+}
 
 header {
   position: fixed;
@@ -26,42 +30,87 @@ header {
   margin-top: 5px;
   transition: all 0.3s ease-in-out;
 }
-.name {
-  font-size: 60px;
-  background: linear-gradient(45deg, rgb(169, 43, 200), rgb(159, 21, 95));
-  -webkit-text-fill-color: transparent;
-  background-clip: border-box;
-  -webkit-background-clip: text;
-
+.Hjem {
+  color: #fff;
   text-decoration: none;
-  font-weight: 800;
-  font-style: italic;
-  pointer-events: none;
-  animation: slideTop 1s ease forwards;
-}
-
-.nav-bar a {
-  display: inline-block;
-  font-size: 18px;
-  color: white;
+  font-size: 2rem;
   font-weight: 500;
-  margin-left: 35px;
-  text-decoration: none;
-  border-bottom: 2px solid transparent;
-  transition: 0.5s;
-  opacity: 0;
-  animation: slideTop 0.5s ease forwards;
-  animation-delay: calc(0.2s * var(--i));
+  padding: 10px 15px;
+  position: relative;
+  transition: color 0.3s ease;
 }
-.nav-bar a:hover {
-  font-size: 25px;
+.Hjem:hover {
+  color: #7b0c4f;
   background: linear-gradient(45deg, rgb(169, 43, 200), rgb(159, 21, 95));
   background-clip: unset;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
-  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+  transform: scale(1.2);
 }
+.nav-bar {
+  display: flex;
+  gap: 20px;
+  font-size: 30px;
+}
+
+.nav-bar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 10px 15px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-bar a:hover,
+.nav-bar a.active {
+  color: #7b0c4f;
+  background: linear-gradient(45deg, rgb(169, 43, 200), rgb(159, 21, 95));
+  background-clip: unset;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: color 0.3s ease-in-out;
+  transform: scale(1.2);
+}
+
+.nav-bar a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #7b0c4f;
+  transition: 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-bar a:hover::after,
+.nav-bar a.active::after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .nav-bar {
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-bar a {
+    padding: 8px 12px;
+  }
+}
+
 #particles-js {
   position: absolute;
   top: 0;
@@ -185,10 +234,47 @@ header {
 }
 .Ellipse {
   position: absolute;
-  bottom: 50px;
-  left: 160px;
-  animation: zoomIn 1s ease forwards, zoomOut 4s ease-in-out infinite;
-  animation-delay: 2.1s, 3.1s;
+  top: 450px;
+  bottom: 100px;
+  left: 350px;
+  animation: zoomPulse 4s ease-in-out infinite;
+}
+
+@keyframes zoomPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.balls1 {
+  position: absolute;
+  top: 120px;
+  right: 300px;
+  animation: pulse 2s infinite ease-in-out;
+}
+.balls1 img {
+  display: block;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 .arrow {
   position: absolute;
@@ -198,7 +284,34 @@ header {
   cursor: pointer;
   width: 40px;
   height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+
+  border-radius: 50%;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
+.arrow:hover {
+  transform: translateX(-50%) scale(1.2);
+}
+
+/* Bouncing Animation */
+/* @keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+} */
+
+.arrow {
+  animation: bounce 2s infinite ease-in-out;
+}
+
 @keyframes slideTop {
   0% {
     opacity: 0;
@@ -229,32 +342,13 @@ header {
     transform: translateX(0);
   }
 }
-@keyframes zoomIn {
-  0% {
-    opacity: 0;
-    transform: scale(0);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
+
 @keyframes circleRotate {
   0% {
     transform: rotate(0);
   }
   100% {
     transform: rotate(36deg);
-  }
-}
-@keyframes zoomOut {
-  0% {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
   }
 }
 
@@ -300,7 +394,7 @@ header {
 
   #hero {
     height: auto;
-    padding: 80px 5%;
+    padding-top: 400px;
   }
 
   .hero-content {

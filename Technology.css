@@ -13,6 +13,19 @@
   font-weight: bold;
   margin-bottom: 30px;
   text-align: center;
+  opacity: 1;
+  animation: fadeInDown 1s ease forwards;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .Technology {
@@ -32,33 +45,77 @@
   justify-content: center;
   border-radius: 10px;
   transition: transform 0.3s ease-in-out;
-  cursor: pointer;
   flex-shrink: 0;
+  opacity: 0;
   overflow: hidden;
+  transform: translateY(20px);
+  /* transition: transform 0.3s ease-in-out; */
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(20px);
+  }
+}
+
+.Technology .icon-frame:nth-child(1) {
+  animation-delay: 1s;
+}
+.Technology .icon-frame:nth-child(2) {
+  animation-delay: 1.2s;
+}
+.Technology .icon-frame:nth-child(3) {
+  animation-delay: 1.4s;
+}
+.Technology .icon-frame:nth-child(4) {
+  animation-delay: 1.6s;
+}
+.Technology .icon-frame:nth-child(5) {
+  animation-delay: 1.8s;
+}
+.Technology .icon-frame:nth-child(6) {
+  animation-delay: 2s;
 }
 
 .icon-frame:hover {
-  transform: scale(1.1);
+  transform: scale(1.5);
+  transition: transform 0.3s ease-in-out;
 }
 .icon-frame img {
   width: 50px;
   height: auto;
   margin-bottom: 10px;
 }
+
 .icon-frame h3 {
   font-size: 16px;
   color: #f8f9fa;
   font-weight: bold;
   margin: 0;
 }
-/* 🌟 Tablets (iPad & similar: 768px - 1024px) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 @media (max-width: 1024px) {
   #Technology-page h1 {
-    font-size: 3rem; /* Reduce title size */
+    font-size: 3rem;
   }
 
   .Technology {
-    gap: 15px; /* Reduce spacing */
+    gap: 15px;
   }
 
   .icon-frame {
@@ -75,7 +132,6 @@
   }
 }
 
-/*  Mobile Devices  */
 @media (max-width: 767px) {
   #Technology-page h1 {
     font-size: 2.5rem; /* Smaller heading */
@@ -100,7 +156,6 @@
   }
 }
 
-/*  Small Mobile (Below 480px) */
 @media (max-width: 480px) {
   #Technology-page h1 {
     font-size: 2rem;
