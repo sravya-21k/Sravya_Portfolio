@@ -257,6 +257,67 @@ h3 {
 .see-more {
   margin-top: 30px;
 }
+.project-card4 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: start;
+  background: transparent;
+  gap: 30px;
+  padding: 20px;
+  border-radius: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  max-width: 1200px;
+  height: auto;
+  margin: 40px auto;
+  /* border: 2px solid red; */
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+.image-box {
+  width: 600px;
+  height: 450px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-card4:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2);
+}
+
+.wishlist-img {
+  position: relative;
+  align-items: start;
+  width: 550px;
+  height: 400px;
+  margin-left: 0;
+  cursor: pointer;
+  object-fit: cover;
+  /* border-radius: 20px; */
+  margin-right: 5px;
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
+}
+
+.project-info4 {
+  text-align: left;
+
+  max-width: 400px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.project-info p {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 15px;
+}
 /*  Tablets  */
 @media (max-width: 1024px) {
   #projects {
