@@ -339,16 +339,19 @@ h3 {
   .image-box,
   .image-box2,
   .image-box3 {
-    width: 90%;
-    height: auto;
+    width: 600px;
+    height: 450px;
   }
 
   .mercury-img,
   .flipkart-image,
   .Todo-image,
   .wishlist-img {
-    width: 100%;
-    height: auto;
+    width: 550px;
+    height: 420px;
+    object-fit: fill;
+
+    margin: 0;
   }
 
   .project-info1,
@@ -385,10 +388,19 @@ h3 {
   .image-box,
   .image-box2,
   .image-box3 {
-    width: 100%;
-    height: auto;
+    width: 600px;
+    height: 450px;
   }
+  .mercury-img,
+  .flipkart-image,
+  .Todo-image,
+  .wishlist-img {
+    width: 550px;
+    height: 420px;
+    object-fit: fill;
 
+    margin: 0;
+  }
   .project-info1,
   .project-info2,
   .project-info3,
@@ -423,12 +435,22 @@ h3 {
   .image-box,
   .image-box2,
   .image-box3 {
-    width: 90%;
-    height: auto;
-    padding-right: 90px;
+    width: 450px;
+    height: 450px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
+  .mercury-img,
+  .flipkart-image,
+  .Todo-image,
+  .wishlist-img {
+    width: 400px;
+    height: 420px;
+    object-fit: fill;
 
-  .project-info1,
+    margin: 0;
+  }
+  .pro .project-info1,
   .project-info2,
   .project-info3,
   .project-info4 {

@@ -6,7 +6,7 @@
 }
 body {
   height: 100vh;
-  background: rgba(20, 37, 71, 1);
+  background: rgb(7, 21, 48);
   color: #f0f4ff;
 }
 main,
@@ -20,14 +20,14 @@ header {
   left: 0;
   width: 100%;
   padding: 20px 10%;
-  background: rgba(20, 37, 71, 1);
+  background: rgb(7, 21, 48);
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  margin-top: 5px;
+  margin-top: 0 auto;
   transition: all 0.3s ease-in-out;
 }
 .Hjem {
@@ -57,7 +57,7 @@ header {
 .nav-bar a {
   color: #fff;
   text-decoration: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 500;
   padding: 10px 15px;
   position: relative;
@@ -102,23 +102,23 @@ header {
   pointer-events: none;
 }
 #hero {
-  position: relative;
-  background: linear-gradient(
-    135deg,
-    rgba(34, 54, 102, 1),
-    rgba(20, 37, 71, 1)
-  );
-  z-index: 1;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
-  text-align: center;
-  color: #fff;
   display: flex;
+  /* flex: 1; */
+  flex-direction: column;
+  position: relative;
   justify-content: center;
+  justify-self: center;
   text-align: center;
   align-items: center;
-  padding: 100px 10%;
+  background: rgb(7, 21, 48);
+  z-index: 1;
+  overflow: hidden;
+  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  padding: 20px;
+  color: #fff;
+
   animation: shimmerBackground 2s infinite ease-in-out;
   @keyframes shimmerBackground {
     0% {
@@ -145,24 +145,27 @@ header {
   }
 }
 .hero-content {
-  position: relative;
-  line-height: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.2;
   z-index: 2;
-  max-width: 700px;
-  margin: 0 auto;
+  max-width: 800px;
   text-align: center;
-  text-shadow: 0 4px 6px rgba(201, 110, 213, 0.6);
+  margin: 0 auto;
 }
 .hero-content h1 {
-  font-size: 100px;
-  font-weight: 1000;
+  font-size: 5rem;
+  font-weight: bold;
   font-style: oblique;
+  justify-content: center;
   font-family: "Port Lligat Slab", serif;
   background: linear-gradient(
-    135deg,
-    rgb(159, 21, 95) 30%,
-    rgba(148, 93, 214, 1) 65%,
-    rgb(159, 21, 95) 90%
+    90deg,
+    rgba(19, 173, 199, 1),
+    rgba(148, 93, 214, 1),
+    rgba(105, 120, 209, 1)
   );
   background-clip: content-box;
   -webkit-background-clip: text;
@@ -172,77 +175,53 @@ header {
   animation-delay: 0.3s;
   transition: all 0.3s ease-in-out;
 }
-.hero-content h1:hover {
-  transform: scale(1.05);
-  /* text-shadow: 0px 8px 20px rgba(148, 93, 214, 0.8); */
-}
+
 .hero-content h3 {
-  font-size: 50px;
+  font-size: 1.8rem;
   font-weight: 500;
   font-style: semibold;
   margin-top: 15px;
 
-  color: #ddd;
-  padding-left: 80px;
+  color: #fff;
+  padding-right: 20px;
   opacity: 0;
   animation: slideLeft 1s ease forwards;
   animation-delay: 1s;
 }
 .hero-content p {
-  font-size: 18px;
+  font-size: 1.2rem;
   margin: 20px 0 40px;
   font-weight: 400px;
-  color: rgba(255, 255, 255, 0.8);
+  /* color: rgba(255, 255, 255, 0.8); */
   /* opacity: 0; */
+  color: #ccc;
   animation: slideLeft 1s ease forwards;
   animation-delay: 1.3s;
 }
 .hero-content h1:hover {
-  color: #fff;
-  background: linear-gradient(
-    90deg,
-    rgba(19, 173, 199, 1),
-    rgba(148, 93, 214, 1),
-    rgba(105, 120, 209, 1)
-  );
-  background-clip: content-box;
-  -webkit-background-clip: text;
+  transform: scale(1.05);
 }
 .bx {
   color: blueviolet;
   padding-top: 50px;
   width: 50px;
 }
-.Ellipse {
+.Ellipse img {
   position: absolute;
-  top: 450px;
-  bottom: 100px;
-  left: 350px;
+  top: 20%;
+  left: 60%;
+  animation: zoomPulse 4s ease-in-out infinite;
+}
+
+.balls1 img {
+  position: absolute;
+  top: 60%;
+  right: 70%;
+  display: block;
   animation: zoomPulse 4s ease-in-out infinite;
 }
 
 @keyframes zoomPulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.balls1 {
-  position: absolute;
-  top: 120px;
-  right: 300px;
-  animation: pulse 2s infinite ease-in-out;
-}
-.balls1 img {
-  display: block;
-}
-@keyframes pulse {
   0% {
     transform: scale(1);
   }
@@ -272,16 +251,31 @@ html {
   color: white;
 
   border-radius: 50%;
-  transition: transform 0.3s ease, background 0.3s ease;
+  transition: transform 0.3s ease-in-out;
 }
-.arrow:hover {
-  transform: translateX(-50%) scale(1.2);
+.arrow img {
+  width: 40px; /* Adjust arrow size */
+  height: auto;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.arrow:hover img {
+  opacity: 1;
+  transform: scale(1);
 }
 
-.arrow {
-  animation: bounce 2s infinite ease-in-out;
+.arrow img {
+  animation: bounce 3s infinite ease-in-out;
 }
-
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
 @keyframes slideTop {
   0% {
     opacity: 0;
@@ -351,33 +345,32 @@ html {
 
 @media (max-width: 768px) {
   header {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;
+    padding: 15px 5%;
   }
 
   .nav-bar {
     display: flex;
-    margin-top: 10px;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row; /* Ensures navbar stays in row */
     gap: 10px;
-    justify-content: start;
-    padding-right: 150px;
+    font-size: 20px;
+    align-items: center;
   }
 
   .nav-bar a {
-    padding: 8px 12px;
+    white-space: nowrap;
+    font-size: 1.2rem;
+    padding: 8px 10px;
   }
-  .Hjem {
-    padding-right: 120px;
-  }
+
+  /* .Hjem {
+    padding-right: 10px;
+  } */
 }
 #hero {
   height: auto;
-  padding-top: 450px;
 }
 
 .hero-content {
@@ -401,7 +394,7 @@ html {
 
 .Ellipse {
   left: 60%;
-  top: 300px;
+  top: 25%;
 }
 
 .arrow {
@@ -411,23 +404,33 @@ html {
   text-align: center;
 }
 .balls1 {
-  position: absolute;
   top: 600px;
   left: 60px;
-  animation: pulse 2s infinite ease-in-out;
 }
-.balls1 img {
-  display: block;
-}
-/* Small Mobile Devices */
+
 @media (max-width: 480px) {
-  .name {
-    font-size: 28px;
+  .nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
   }
 
   .nav-bar a {
-    font-size: 12px;
-    margin-left: 10px;
+    font-size: 0.9rem;
+    padding: 5px 5px;
+    white-space: nowrap;
+    overflow-x: auto;
+    padding: 0 10px;
+  }
+  .navbar .kontakt {
+    display: inline-block; /* Ensure the element is displayed */
+    font-size: 12px; /* Adjust the font size to fit better on small screens */
+  }
+  .Hjem {
+    font-size: 1rem;
+    /* padding: 5px 8px; */
   }
 
   .hero-content h1 {
@@ -444,9 +447,8 @@ html {
     padding-left: 100px;
   }
   .balls1 {
-    position: absolute;
-    top: 570px;
-    left: 30px;
+    top: 600px;
+    left: 60px;
   }
   .balls1 img {
     display: block;

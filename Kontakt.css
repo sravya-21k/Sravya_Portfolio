@@ -1,7 +1,7 @@
 .kontakt {
   position: relative;
   padding: 50px 20px;
-  background: #142547; /* Dark background for contrast */
+  background: rgb(7, 21, 48); /* Dark background for contrast */
   text-align: center;
   color: white;
 }
