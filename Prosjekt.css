@@ -329,7 +329,8 @@ h3 {
 
   .project-card1,
   .project-card2,
-  .project-card3 {
+  .project-card3,
+  .project-card4 {
     flex-direction: column; /* Stack items */
     align-items: center;
     text-align: center;
@@ -344,14 +345,16 @@ h3 {
 
   .mercury-img,
   .flipkart-image,
-  .Todo-image {
+  .Todo-image,
+  .wishlist-img {
     width: 100%;
     height: auto;
   }
 
   .project-info1,
   .project-info2,
-  .project-info3 {
+  .project-info3,
+  .project-info4 {
     text-align: center;
     max-width: 90%;
   }
@@ -373,7 +376,8 @@ h3 {
 
   .project-card1,
   .project-card2,
-  .project-card3 {
+  .project-card3,
+  .project-card4 {
     gap: 15px;
     padding: 15px;
   }
@@ -387,7 +391,8 @@ h3 {
 
   .project-info1,
   .project-info2,
-  .project-info3 {
+  .project-info3,
+  .project-info4 {
     max-width: 100%;
   }
 
@@ -404,28 +409,32 @@ h3 {
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .project-card1,
   .project-card2,
-  .project-card3 {
-    gap: 10px;
+  .project-card3,
+  .project-card4 {
+    gap: 15px;
     padding: 10px;
   }
 
   .image-box,
   .image-box2,
   .image-box3 {
-    width: 100%;
+    width: 90%;
     height: auto;
+    padding-right: 90px;
   }
 
   .project-info1,
   .project-info2,
-  .project-info3 {
+  .project-info3,
+  .project-info4 {
     text-align: center;
-    max-width: 100%;
+    max-width: 90%;
+    padding-left: 10px;
   }
 
   .buttons a {

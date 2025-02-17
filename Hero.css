@@ -92,25 +92,6 @@ header {
   width: 100%;
 }
 
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-  }
-
-  .nav-bar {
-    margin-top: 10px;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .nav-bar a {
-    padding: 8px 12px;
-  }
-}
-
 #particles-js {
   position: absolute;
   top: 0;
@@ -297,17 +278,6 @@ html {
   transform: translateX(-50%) scale(1.2);
 }
 
-/* Bouncing Animation */
-/* @keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-} */
-
 .arrow {
   animation: bounce 2s infinite ease-in-out;
 }
@@ -378,49 +348,77 @@ html {
 }
 
 /* Mobile Devices */
+
 @media (max-width: 768px) {
   header {
-    padding: 15px 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
   }
 
-  .name {
-    font-size: 35px;
+  .nav-bar {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    justify-content: start;
+    padding-right: 150px;
   }
 
   .nav-bar a {
-    font-size: 14px;
-    margin-left: 15px;
+    padding: 8px 12px;
   }
-
-  #hero {
-    height: auto;
-    padding-top: 400px;
-  }
-
-  .hero-content {
-    max-width: 90%;
-  }
-
-  .hero-content h1 {
-    font-size: 60px;
-  }
-
-  .hero-content h3 {
-    font-size: 30px;
-    padding-left: 20px;
-  }
-
-  .hero-content p {
-    font-size: 14px;
-  }
-
-  .Ellipse {
-    left: 50%;
-    bottom: 30px;
-    transform: translateX(-50%);
+  .Hjem {
+    padding-right: 120px;
   }
 }
+#hero {
+  height: auto;
+  padding-top: 450px;
+}
 
+.hero-content {
+  max-width: 100%;
+}
+
+.hero-content h1 {
+  font-size: 60px;
+  padding-right: 250px;
+}
+
+.hero-content h3 {
+  font-size: 30px;
+  padding-left: 10px;
+}
+
+.hero-content p {
+  font-size: 16px;
+  padding-right: 150px;
+}
+
+.Ellipse {
+  left: 60%;
+  top: 300px;
+}
+
+.arrow {
+  position: absolute;
+  top: 90%;
+
+  text-align: center;
+}
+.balls1 {
+  position: absolute;
+  top: 600px;
+  left: 60px;
+  animation: pulse 2s infinite ease-in-out;
+}
+.balls1 img {
+  display: block;
+}
 /* Small Mobile Devices */
 @media (max-width: 480px) {
   .name {
@@ -443,5 +441,18 @@ html {
 
   .hero-content p {
     font-size: 12px;
+    padding-left: 100px;
+  }
+  .balls1 {
+    position: absolute;
+    top: 570px;
+    left: 30px;
+  }
+  .balls1 img {
+    display: block;
+  }
+  .Ellipse {
+    left: 55%;
+    top: 350px;
   }
 }
