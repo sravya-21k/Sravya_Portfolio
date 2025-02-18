@@ -415,21 +415,21 @@ html {
     justify-content: space-between;
     align-items: center;
     flex-wrap: nowrap;
+    gap: 2px;
   }
 
   .nav-bar a {
-    font-size: 0.9rem;
-    padding: 5px 5px;
+    font-size: 0.7rem;
+
     white-space: nowrap;
     overflow-x: auto;
-    padding: 0 10px;
   }
   .navbar .kontakt {
     display: inline-block; /* Ensure the element is displayed */
-    font-size: 12px; /* Adjust the font size to fit better on small screens */
+    font-size: 0.7rem; /* Adjust the font size to fit better on small screens */
   }
   .Hjem {
-    font-size: 1rem;
+    font-size: 0.7rem;
     /* padding: 5px 8px; */
   }
 
