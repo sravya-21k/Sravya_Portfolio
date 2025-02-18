@@ -9,6 +9,11 @@ body {
   background: rgb(7, 21, 48);
   color: #f0f4ff;
 }
+html,
+body {
+  overflow-y: auto;
+}
+
 main,
 section:first-of-type {
   padding-top: 80px; /* Adjust according to your header's height */
@@ -193,7 +198,7 @@ header {
   margin: 20px 0 40px;
   font-weight: 400px;
   /* color: rgba(255, 255, 255, 0.8); */
-  /* opacity: 0; */
+  opacity: 0;
   color: #ccc;
   animation: slideLeft 1s ease forwards;
   animation-delay: 1.3s;
