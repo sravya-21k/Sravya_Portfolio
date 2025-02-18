@@ -1,0 +1,467 @@
+#projects {
+  text-align: center;
+  padding: 50px;
+  background: rgba(20, 37, 71, 1);
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, rgb(169, 43, 200), rgb(159, 21, 95));
+  -webkit-text-fill-color: transparent;
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  margin-bottom: 30px;
+}
+
+.project-card1 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: start;
+  background: transparent;
+  gap: 30px;
+  padding: 20px;
+  border-radius: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  max-width: 1200px;
+  height: auto;
+  margin: 40px auto;
+  /* border: 2px solid red; */
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+.image-box {
+  width: 600px;
+  height: 450px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-card1:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2);
+}
+
+.mercury-img {
+  position: relative;
+  align-items: start;
+  width: 550px;
+  height: 400px;
+  margin-left: 0;
+  cursor: pointer;
+  object-fit: cover;
+  /* border-radius: 20px; */
+  margin-right: 5px;
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); */
+}
+
+.project-info1 {
+  text-align: left;
+
+  max-width: 400px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.project-info p {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.buttons a {
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.live-preview {
+  background: linear-gradient(
+    rgba(64, 124, 173, 1),
+    rgba(105, 120, 209, 1),
+    rgba(148, 93, 214, 1)
+  );
+}
+
+.github {
+  border: 2px solid white;
+  background: transparent;
+}
+.project-card.reverse {
+  flex-direction: row-reverse;
+}
+.live-preview:hover,
+.github:hover {
+  opacity: 0.8;
+}
+
+.project-card2 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background: transparent;
+  gap: 30px;
+  padding: 20px;
+  border-radius: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  max-width: 1200px;
+  height: auto;
+  margin: 40px auto;
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+}
+.image-box2 {
+  position: relative;
+  width: 600px;
+  height: 450px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+.flipkart-image {
+  /* align-items: start; */
+  width: 550px;
+  height: 420px;
+  object-fit: fill;
+  margin: 0;
+  cursor: pointer;
+}
+
+.project-card2:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2);
+}
+
+.project-info2 {
+  flex: 1;
+  /* width: 750px;
+  height: 680px; */
+  text-align: left;
+  /* padding-top: 120px; */
+  max-width: 500px;
+}
+.project-info2 h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.project-info2 p {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.project-card3 {
+  display: flex;
+  align-items: start;
+  text-align: center;
+  justify-content: space-evenly;
+  background: transparent;
+  gap: 30px;
+  padding: 20px;
+  border-radius: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  max-width: 1200px;
+  height: auto;
+  margin: 40px auto;
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+  /* border: 2px solid red; */
+  /* box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1); */
+}
+.image-box3 {
+  width: 600px;
+  height: 450px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project-card3:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2);
+}
+
+.Todo-image {
+  /* position: relative; */
+  width: 550px;
+  height: 420px;
+  object-fit: fill;
+
+  margin: 0;
+}
+
+.project-info3 {
+  width: 750px;
+  height: 680px;
+  text-align: left;
+  /* padding-top: 30px; */
+  max-width: 400px;
+}
+.project-info1,
+.project-info3 {
+  min-height: auto;
+  height: auto;
+}
+.tools-section {
+  background: rgba(255, 255, 255, 0.1); /* Lett bakgrunn */
+  padding: 10px;
+  margin-top: 10px;
+  border-left: 4px solid #2575fc; /* Blå linje for stil */
+  border-radius: 5px;
+}
+
+.tools-section h4 {
+  font-size: 18px;
+  color: #ffffff; /* Tilpass til din designfarge */
+  margin-bottom: 5px;
+}
+
+.tools-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.tools-section li {
+  font-size: 16px;
+  padding: 5px 0;
+  color: #ccc; /* Lysere farge for lesbarhet */
+}
+
+.see-more {
+  margin-top: 30px;
+}
+.project-card4 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background: transparent;
+  gap: 30px;
+  padding: 20px;
+  border-radius: 20px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  max-width: 1200px;
+  height: auto;
+  margin: 40px auto;
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+}
+.image-box {
+  position: relative;
+  width: 600px;
+  height: 450px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+.wishlist-img {
+  /* align-items: start; */
+  width: 550px;
+  height: 420px;
+  object-fit: fill;
+  margin: 0;
+  cursor: pointer;
+}
+
+.project-card4:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.2);
+}
+
+.project-info4 {
+  flex: 1;
+  /* width: 750px;
+  height: 680px; */
+  text-align: left;
+  /* padding-top: 120px; */
+  max-width: 500px;
+}
+.project-info4 h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.project-info4 p {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+/*  Tablets  */
+@media (max-width: 1024px) {
+  #projects {
+    padding: 40px;
+  }
+
+  h2 {
+    font-size: 3rem; /* Reduce heading size */
+  }
+
+  .project-card1,
+  .project-card2,
+  .project-card3,
+  .project-card4 {
+    flex-direction: column; /* Stack items */
+    align-items: center;
+    text-align: center;
+  }
+
+  .image-box,
+  .image-box2,
+  .image-box3 {
+    width: 600px;
+    height: 450px;
+  }
+
+  .mercury-img,
+  .flipkart-image,
+  .Todo-image,
+  .wishlist-img {
+    width: 550px;
+    height: 420px;
+    object-fit: fill;
+
+    margin: 0;
+  }
+
+  .project-info1,
+  .project-info2,
+  .project-info3,
+  .project-info4 {
+    text-align: center;
+    max-width: 90%;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+}
+
+/*  (480px - 767px) */
+@media (max-width: 767px) {
+  #projects {
+    padding: 30px;
+  }
+
+  h2 {
+    font-size: 2.5rem; /* Smaller heading */
+  }
+
+  .project-card1,
+  .project-card2,
+  .project-card3,
+  .project-card4 {
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .image-box,
+  .image-box2,
+  .image-box3 {
+    width: 600px;
+    height: 450px;
+  }
+  .mercury-img,
+  .flipkart-image,
+  .Todo-image,
+  .wishlist-img {
+    width: 550px;
+    height: 420px;
+    object-fit: fill;
+
+    margin: 0;
+  }
+  .project-info1,
+  .project-info2,
+  .project-info3,
+  .project-info4 {
+    max-width: 100%;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* (Below 480px) */
+@media (max-width: 480px) {
+  #projects {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  .project-card1,
+  .project-card2,
+  .project-card3,
+  .project-card4 {
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .image-box,
+  .image-box2,
+  .image-box3 {
+    width: 450px;
+    height: 450px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .mercury-img,
+  .flipkart-image,
+  .Todo-image,
+  .wishlist-img {
+    width: 400px;
+    height: 420px;
+    object-fit: fill;
+
+    margin: 0;
+  }
+  .pro .project-info1,
+  .project-info2,
+  .project-info3,
+  .project-info4 {
+    text-align: center;
+    max-width: 90%;
+    padding-left: 10px;
+  }
+
+  .buttons a {
+    width: 100%;
+    text-align: center;
+    padding: 8px 15px;
+  }
+}

@@ -1,0 +1,163 @@
+.kontakt {
+  position: relative;
+  padding: 50px 20px;
+  background: rgb(7, 21, 48); /* Dark background for contrast */
+  text-align: center;
+  color: white;
+}
+
+.up-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  z-index: 1000; /* Ensures it stays on top */
+}
+
+.up-arrow img {
+  width: 50px;
+  height: 50px;
+}
+
+/* Hover effect for a smooth transition */
+.up-arrow:hover {
+  transform: scale(1.5);
+}
+
+.kontakt-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+.kontakt-details p {
+  font-size: 20px;
+  color: #ddd;
+  /* font-family: "Roboto", sans-serif; */
+}
+.kontakt-details a {
+  color: #13adc7;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+.kontakt-details a:hover {
+  color: #ff3f7c;
+}
+#kontakt-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+#kontakt-icons a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#kontakt-icons img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+#kontakt-icons a:hover img {
+  transform: scale(1.2);
+  filter: drop-shadow(4px 8px 10px rgba(0, 0, 0, 0.4));
+}
+
+/* Animation: Fade-in effect */
+#kontakt-icons {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*  Tablets ( 768px - 1024px) */
+@media (max-width: 1024px) {
+  #kontakt {
+    padding: 30px 15px;
+  }
+
+  h2 {
+    font-size: 3rem; /* Adjust heading size */
+  }
+
+  .kontakt-details p {
+    font-size: 18px;
+  }
+
+  /*  Mobile Devices  */
+  @media (max-width: 767px) {
+    #kontakt {
+      padding: 25px 10px;
+      border-radius: 10px;
+    }
+
+    h2 {
+      font-size: 2.5rem; /* Reduce heading */
+    }
+
+    .kontakt-details p {
+      font-size: 16px;
+    }
+
+    .kontakt-icons img {
+      width: 35px;
+      margin: 0 8px;
+    }
+    #kontakt-icons {
+      gap: 15px;
+    }
+    .kontakt-icons a {
+      width: 40px; /* Slightly smaller icons */
+      height: 40px;
+    }
+  }
+}
+
+/* Small Mobile (Below 480px) */
+@media (max-width: 480px) {
+  #kontakt {
+    padding: 20px 5px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .kontakt-details p {
+    font-size: 14px;
+  }
+
+  .kontakt-icons {
+    flex-wrap: wrap; /* Allows icons to wrap if needed */
+    gap: 10px;
+  }
+
+  .kontakt-icons img {
+    width: 30px;
+    margin: 0 5px;
+  }
+}
